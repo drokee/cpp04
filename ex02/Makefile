@@ -5,7 +5,7 @@ CXXFLAGS = -std=c++98 -Wall -Wextra -Werror
 LIBRARY = Animal
 
 # Source files
-SRCS = Cat.cpp Animal.cpp Dog.cpp main.cpp WrongAnimal.cpp WrongCat.cpp
+SRCS = Cat.cpp Animal.cpp Dog.cpp main.cpp Brain.cpp
 
 # Object files (automatically generated from source files)
 OBJS = $(SRCS:.cpp=.o)
