@@ -1,29 +1,41 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.cpp                                           :+:      :+:    :+:   */
+/*   Ice.cpp                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: amahdiou <amahdiou@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/12/06 10:55:35 by amahdiou          #+#    #+#             */
-/*   Updated: 2023/12/09 14:24:29 by amahdiou         ###   ########.fr       */
+/*   Created: 2023/12/10 15:22:41 by amahdiou          #+#    #+#             */
+/*   Updated: 2023/12/10 15:32:47 by amahdiou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include"Animal.hpp"
-#include"Cat.hpp"
-#include"Dog.hpp"
-int main()
-{
-    const Animal* j = new Dog();
-    const Animal* i = new Cat();
-    std::cout << i->getType() << std::endl;
-    std::cout << j->getType() << std::endl;
-    i->makeSound();
-    j->makeSound();
+#include"Ice.hpp"
 
-    delete i;
-    delete j;//should not create a leak
-    system("leaks Animal");
-    return 0;
+Ice::Ice()
+{
+    type = "UNKNOWN";
+}
+Ice::Ice(std::string type)
+{
+    this->type = type;
+}
+Ice::Ice(const Ice &t)
+{
+    this->type = t.type;
+}
+Ice &Ice::operator = (const Ice &t)
+{
+    if(this != &t)
+    {
+        delete t;
+        
+    }
+    return *this;
+}
+AMateria* Ice::clone() const{
+    return new Ice;
+}
+Ice::~Ice(){
+
 }

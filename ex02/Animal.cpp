@@ -6,7 +6,7 @@
 /*   By: amahdiou <amahdiou@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/06 09:58:23 by amahdiou          #+#    #+#             */
-/*   Updated: 2023/12/06 14:50:44 by amahdiou         ###   ########.fr       */
+/*   Updated: 2023/12/09 11:40:01 by amahdiou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,8 +37,4 @@ Animal::~Animal()
 std::string Animal::getType()const
 {
     return this->type;
-}
-void Animal::makeSound()const
-{
-    std::cout << "Animal" << std::endl;
 }
