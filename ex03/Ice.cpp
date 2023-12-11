@@ -6,7 +6,7 @@
 /*   By: amahdiou <amahdiou@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/10 15:22:41 by amahdiou          #+#    #+#             */
-/*   Updated: 2023/12/10 15:32:47 by amahdiou         ###   ########.fr       */
+/*   Updated: 2023/12/11 15:33:13 by amahdiou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 Ice::Ice()
 {
-    type = "UNKNOWN";
+    type = "ice";
 }
 Ice::Ice(std::string type)
 {
@@ -26,15 +26,17 @@ Ice::Ice(const Ice &t)
 }
 Ice &Ice::operator = (const Ice &t)
 {
-    if(this != &t)
-    {
-        delete t;
-        
-    }
+      if(this != &t)
+        this->type = t.type;
     return *this;
 }
-AMateria* Ice::clone() const{
-    return new Ice;
+AMateria* Ice::clone() const
+{
+    return new Ice();
+}
+void Ice::use(ICharacter& target)
+{
+    std::cout << "Ice : * shoots an ice bolt at " << target.getName() << " *" << std::endl;
 }
 Ice::~Ice(){
 

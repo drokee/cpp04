@@ -6,7 +6,7 @@
 /*   By: amahdiou <amahdiou@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/10 11:38:09 by amahdiou          #+#    #+#             */
-/*   Updated: 2023/12/10 14:15:25 by amahdiou         ###   ########.fr       */
+/*   Updated: 2023/12/11 15:20:52 by amahdiou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,14 +21,18 @@ AMateria::AMateria(std::string const &type)
 }
 AMateria::AMateria(AMateria &t)
 {
-    this = t;
+    this->type = t.type;
 }
 AMateria &AMateria::operator=(const AMateria &t)
 {
     this->type = t.type;
     return *this;
 }
-std::string AMateria::const & getType() const
+void    AMateria::use(ICharacter __unused &target)
+{
+    std::cout << "AMateria use Called" << std::endl; 
+}
+std::string const & AMateria::getType() const
 {
     return type;
 }

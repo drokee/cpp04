@@ -1,28 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Cure.hpp                                           :+:      :+:    :+:   */
+/*   Character.hpp                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: amahdiou <amahdiou@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/12/10 15:12:27 by amahdiou          #+#    #+#             */
-/*   Updated: 2023/12/11 15:20:31 by amahdiou         ###   ########.fr       */
+/*   Created: 2023/12/11 15:51:29 by amahdiou          #+#    #+#             */
+/*   Updated: 2023/12/11 15:53:03 by amahdiou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef CURE_HPP
-#define CURE_HPP
-#include"AMateria.hpp"
-#include "Character.hpp"
-class AMateria;
-class Cure : public AMateria{
+#ifndef ICHARACTER_HPP
+#define ICHARACTER_HPP
+class Character
+{
     public:
-    Cure();
-    Cure(std::string type);
-    Cure(const Cure &t);
-    Cure &operator = (const Cure &t);
-    AMateria* clone() const;
-    ~Cure();
-    void use(ICharacter& target);
+        Character();
+        Character(const Character &t);
+        ~Character();
 };
 #endif

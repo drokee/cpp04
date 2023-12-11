@@ -6,14 +6,14 @@
 /*   By: amahdiou <amahdiou@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/10 15:13:22 by amahdiou          #+#    #+#             */
-/*   Updated: 2023/12/10 15:22:31 by amahdiou         ###   ########.fr       */
+/*   Updated: 2023/12/11 15:20:37 by amahdiou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include"Cure.hpp"
 Cure::Cure()
 {
-    type = "UNKNOWN";
+    type = "cure";
 }
 Cure::Cure(std::string type)
 {
@@ -32,6 +32,11 @@ Cure &Cure::operator = (const Cure &t)
 AMateria* Cure::clone() const{
     return new Cure;
 }
-Cure::~Cure(){
+void Cure::use(ICharacter& target)
+{
+    std::cout << "Cure : * heals " << target.getName() << "'s wounds *" <<std::endl;
+}
+Cure::~Cure()
+{
 
 }
