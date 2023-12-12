@@ -18,13 +18,16 @@ MateriaSource::MateriaSource()
 }
 MateriaSource::MateriaSource(const MateriaSource &t)
 {
-
+    *this = t;
 }
 void MateriaSource::learnMateria(AMateria* dyalu)
 {
-    for(int i = 0; i < 4; i++)
-    {
-        dyali[i] = dyalu[i];
+    for (int i = 0; i < 4; i++){
+        if (dyali[i] == NULL)
+        {
+            dyali[i] = dyalu;
+            return;
+        }
     }
 }
 AMateria* MateriaSource::createMateria(std::string const & type)

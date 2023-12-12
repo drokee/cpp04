@@ -48,7 +48,7 @@ std::string const & Character::getName() const
 }
 void Character::equip(AMateria* m)
 {
-    if(arr[pos] == nullptr && pos < 4)
+    if(arr[pos] == NULL && pos < 4)
     {
         arr[pos] = m->clone();
         pos++;
@@ -56,7 +56,7 @@ void Character::equip(AMateria* m)
     }
     for(int i = 0; i < 4 ;i++)
     {
-        if(arr1[i] != nullptr)
+        if(arr1[i] != NULL)
         {
             delete arr1[i];
             arr1[i] = NULL;
@@ -69,7 +69,7 @@ void Character::unequip(int idx)
 {
     if(idx > 0 && idx < 4)
     {
-        delete arr[idx];
+        tmp[idx] = arr[idx];
         arr[idx] = NULL;
     }
 }

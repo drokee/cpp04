@@ -22,6 +22,9 @@ class Character : public ICharacter
         std::string name;
         AMateria *arr[4];
         AMateria *arr1[4];
+        AMateria *tmp[4];
+        // int i ;
+
         int pos;
         int loc;
     public:

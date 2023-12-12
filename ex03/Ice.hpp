@@ -13,9 +13,9 @@
 #ifndef ICE_HPP
 #define ICE_HPP
 #include"AMateria.hpp"
-#include "Character.hpp"
+// #include "Character.hpp"
 #include "ICharacter.hpp"
-
+class AMateria;
 class Ice : public AMateria{
     public:
     Ice();

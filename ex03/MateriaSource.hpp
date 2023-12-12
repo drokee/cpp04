@@ -13,12 +13,15 @@
 #ifndef MATERIASOURCE_HPP
 #define MATERIASOURCE_HPP
 #include"AMateria.hpp"
+#include"Ice.hpp"
+#include"Cure.hpp"
 #include<iostream>
 #include"IMateriaSource.hpp"
 
 class  MateriaSource : public IMateriaSource{
     private :
         AMateria *dyali[4];
+        int index;
     public:
     MateriaSource();
     MateriaSource(const MateriaSource &t);

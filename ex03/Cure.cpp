@@ -19,9 +19,9 @@ Cure::Cure(std::string type)
 {
     this->type = type;
 }
-Cure::Cure(const Cure &t)
+Cure::Cure(const Cure &t) : AMateria()
 {
-    this->type = t.type;
+    *this = t;
 }
 Cure &Cure::operator = (const Cure &t)
 {

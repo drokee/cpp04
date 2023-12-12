@@ -20,9 +20,9 @@ Ice::Ice(std::string type)
 {
     this->type = type;
 }
-Ice::Ice(const Ice &t)
+Ice::Ice(const Ice &t) : AMateria()
 {
-    this->type = t.type;
+    *this = t;
 }
 Ice &Ice::operator = (const Ice &t)
 {

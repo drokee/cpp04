@@ -28,8 +28,9 @@ AMateria &AMateria::operator=(const AMateria &t)
     this->type = t.type;
     return *this;
 }
-void    AMateria::use(ICharacter __unused &target)
+void    AMateria::use(ICharacter  &target)
 {
+    (void) target;
     std::cout << "AMateria use Called" << std::endl; 
 }
 std::string const & AMateria::getType() const
