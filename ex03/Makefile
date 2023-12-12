@@ -5,7 +5,7 @@ CXXFLAGS = -std=c++98 -Wall -Wextra -Werror
 LIBRARY = AMateria
 
 # Source files
-SRCS = AMateria.cpp Cure.cpp Ice.cpp main.cpp
+SRCS = AMateria.cpp Cure.cpp Ice.cpp main.cpp Character.cpp MateriaSource.cpp
 
 # Object files (automatically generated from source files)
 OBJS = $(SRCS:.cpp=.o)

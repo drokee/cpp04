@@ -1,29 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Ice.hpp                                            :+:      :+:    :+:   */
+/*   MateriaSource.hpp                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: amahdiou <amahdiou@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/12/10 14:16:05 by amahdiou          #+#    #+#             */
-/*   Updated: 2023/12/12 12:02:30 by amahdiou         ###   ########.fr       */
+/*   Created: 2023/12/12 14:24:55 by amahdiou          #+#    #+#             */
+/*   Updated: 2023/12/12 15:46:10 by amahdiou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef ICE_HPP
-#define ICE_HPP
+#ifndef MATERIASOURCE_HPP
+#define MATERIASOURCE_HPP
 #include"AMateria.hpp"
-#include "Character.hpp"
-#include "ICharacter.hpp"
+#include<iostream>
+#include"IMateriaSource.hpp"
 
-class Ice : public AMateria{
+class  MateriaSource : public IMateriaSource{
+    private :
+        AMateria *dyali[4];
     public:
-    Ice();
-    Ice(std::string type);
-    Ice(const Ice &t);
-    Ice &operator = (const Ice &t);
-    AMateria* clone() const;
-    ~Ice();
-    void use(ICharacter& target);
+    MateriaSource();
+    MateriaSource(const MateriaSource &t);
+    ~MateriaSource();
+    void learnMateria(AMateria* dyalu);
+    AMateria* createMateria(std::string const & type);
 };
+
 #endif

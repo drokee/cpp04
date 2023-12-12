@@ -6,7 +6,7 @@
 /*   By: amahdiou <amahdiou@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/10 11:38:09 by amahdiou          #+#    #+#             */
-/*   Updated: 2023/12/11 15:20:52 by amahdiou         ###   ########.fr       */
+/*   Updated: 2023/12/12 15:27:09 by amahdiou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,4 +35,8 @@ void    AMateria::use(ICharacter __unused &target)
 std::string const & AMateria::getType() const
 {
     return type;
+}
+AMateria::~AMateria()
+{
+    
 }
