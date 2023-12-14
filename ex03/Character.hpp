@@ -6,27 +6,24 @@
 /*   By: amahdiou <amahdiou@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/11 15:51:29 by amahdiou          #+#    #+#             */
-/*   Updated: 2023/12/12 15:19:28 by amahdiou         ###   ########.fr       */
+/*   Updated: 2023/12/14 14:46:09 by amahdiou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef CHARACTER_HPP
 #define CHARACTER_HPP
-#include "AMateria.hpp"
-#include"ICharacter.hpp"
-#include<iostream>
+# include "AMateria.hpp"
+# include "ICharacter.hpp"
 
 class Character : public ICharacter
 {
     private:
         std::string name;
         AMateria *arr[4];
-        AMateria *arr1[4];
         AMateria *tmp[4];
-        // int i ;
 
         int pos;
-        int loc;
+        // int loc;
     public:
         Character();
         Character(std::string name);

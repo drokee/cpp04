@@ -6,7 +6,7 @@
 /*   By: amahdiou <amahdiou@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/10 15:13:22 by amahdiou          #+#    #+#             */
-/*   Updated: 2023/12/11 15:20:37 by amahdiou         ###   ########.fr       */
+/*   Updated: 2023/12/14 09:26:56 by amahdiou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,9 @@ Cure::Cure(const Cure &t) : AMateria()
 Cure &Cure::operator = (const Cure &t)
 {
     if(this != &t)
+    {
         this->type = t.type;
+    }
     return *this;
 }
 AMateria* Cure::clone() const{

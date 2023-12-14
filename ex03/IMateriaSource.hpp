@@ -6,15 +6,18 @@
 /*   By: amahdiou <amahdiou@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/12 14:07:53 by amahdiou          #+#    #+#             */
-/*   Updated: 2023/12/12 15:47:50 by amahdiou         ###   ########.fr       */
+/*   Updated: 2023/12/13 13:17:30 by amahdiou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 
 #ifndef IMATERIASOURCE_HPP
 #define IMATERIASOURCE_HPP
-#include"AMateria.hpp"
+
+# include "AMateria.hpp"
+
 class AMateria;
+
 class IMateriaSource {
     public:
     virtual ~IMateriaSource() {}
